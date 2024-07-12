@@ -123,8 +123,9 @@ class workscontroller extends Controller
 
         return redirect(route('index'))->with('success', 'Annonce supprimée avec succès.');  // Ajout d'un message de succès
     }
-    public function getAll()
+    public function acceuil()
     {
-        return view('acceuil');
+        $ads = works::latest()->get();
+        return view('acceuil', ['ads' => $ads]);
     }
 }

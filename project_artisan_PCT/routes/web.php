@@ -17,11 +17,9 @@ use App\Http\Controllers\workscontroller;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WorksController::class, 'acceuil']);
 
-Route::get('/accueil', [WorksController::class, 'getAll'])->name('accueil');
+// Route::get('/accueil', [WorksController::class, 'getAll'])->name('accueil');
 
 // Route::get('/accueil', [WorksController::class, 'showAccueil'])->name('accueil');
 
