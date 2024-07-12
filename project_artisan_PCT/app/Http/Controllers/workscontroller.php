@@ -128,4 +128,9 @@ class workscontroller extends Controller
         $ads = works::latest()->get();
         return view('acceuil', ['ads' => $ads]);
     }
+    public function getAll($id)
+    {
+        $ad = works::find($id);
+        return view('acceuil2',['ad' => $ad]);
+    }
 }

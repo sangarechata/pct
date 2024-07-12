@@ -47,10 +47,10 @@
     <div class="container">
       <div class="menu-bg-wrap">
         <div class="site-navigation">
-          <a href="index.html" class="logo m-0 float-start">Property</a>
+          <a href="{{ route('accueil') }}" class="logo m-0 float-start">Entreprise 31</a>
 
           <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
-            <li class="active"><a href="index.html">Home</a></li>
+            <li class="active"><a href="{{ route('accueil') }}">Home</a></li>
             <li class="has-children">
 
             </li>
@@ -124,7 +124,7 @@
               
               @foreach ($ads as $ad)
               <div class="property-item">
-                <a href="property-single.html" class="img" id="link_img">
+                <a href="{{route('accueil2',$ad->id)}}" class="img" id="link_img">
                   <img src="{{ asset('storage/'. $ad->picture) }}" alt="Image" class="img-fluid" id="img" />
                 </a>
 
@@ -145,7 +145,7 @@
                       </span>
                     </div>
 
-                    <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                    <a href="{{route('accueil2',$ad->id)}}" class="btn btn-primary py-2 px-3">See details</a>
                   </div>
                 </div>
               </div>

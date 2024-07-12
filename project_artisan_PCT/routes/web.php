@@ -17,9 +17,9 @@ use App\Http\Controllers\workscontroller;
 |
 */
 
-Route::get('/', [WorksController::class, 'acceuil']);
+Route::get('/', [WorksController::class, 'acceuil'])->name('accueil');
 
-// Route::get('/accueil', [WorksController::class, 'getAll'])->name('accueil');
+Route::get('/accueil2/{id}', [WorksController::class, 'getAll'])->name('accueil2');
 
 // Route::get('/accueil', [WorksController::class, 'showAccueil'])->name('accueil');
 
