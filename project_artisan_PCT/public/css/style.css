@@ -1,3 +1,21 @@
+#link_img{
+  display: block;
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+}
+
+#img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+#img:hover{
+  transform: scale(1.1);
+}
+
 /*
 * Template Name: Property
 * Template Author: Untree.co
